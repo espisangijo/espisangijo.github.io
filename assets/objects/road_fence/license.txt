@@ -1,0 +1,11 @@
+Model Information:
+* title:	Road fence.
+* source:	https://sketchfab.com/3d-models/road-fence-281e185602624b5985c015b345fd206f
+* author:	Matterhorn (https://sketchfab.com/keesihka)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Road fence." (https://sketchfab.com/3d-models/road-fence-281e185602624b5985c015b345fd206f) by Matterhorn (https://sketchfab.com/keesihka) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
