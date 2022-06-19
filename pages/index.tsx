@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Home: NextPage = () => {
   return (
       <div>
-          <h1 className="mt-8 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">Lorem Ipsum</h1>
+          <h1 className="mt-8 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">Jacky Angara</h1>
           <p className="mt-4 text-lg font-light text-gray-500">
             Hi, I am a <i className="p-1 font-mono text-sm text-red-400 bg-gray-100 rounded-md">Software Engineer</i> @ <i className="font-medium text-blue-400">Delight Labs</i>.<br/> 
             Currently working on emerging technologies to build an exciting future.
