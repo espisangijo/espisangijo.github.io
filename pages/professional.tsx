@@ -1,12 +1,18 @@
 import { faFaceKiss, faFaceSmile, faKiss, faKissBeam, faMicrophoneAlt, faMicroscope, faSearch, faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import Head from 'next/head'
 
 function Professional() {
   return (
     
 
         <div>
+
+        <Head>
+          <title>Professional Experience</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
             <h1 className="mt-8 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">Experience</h1>
             
             
