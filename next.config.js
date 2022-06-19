@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
 
   images:{
+    loader: 'akamai',
+    path: "",
     domains: ['www.gravatar.com', 'localhost', 'www.youtube.com', 'img.youtube.com', 'tailwindui.com'],
   },
   webpack: (config, options) => {
