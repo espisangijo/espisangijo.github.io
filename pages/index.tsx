@@ -1,10 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Card from '../components/Card/Card'
-import styles from '../styles/Home.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCodeCompare, faRobot } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
 
@@ -42,29 +36,6 @@ const Home: NextPage = () => {
               </Link>
             </div>
             
-
-            <div className="flex justify-between mt-16 xs:flex-col">
-
-              <Link href="/study">
-                <div className="flex-1 px-3 py-4 mx-2 transition duration-150 delay-150 border-t border-gray-200 cursor-pointer hover:border-gray-500 hover:bg-gray-50">
-                  <dt className="font-medium text-gray-900">Study Journal</dt>
-                  <dd className="mt-2 text-sm text-gray-500">Sharing what I have learned</dd>
-                </div>
-              </Link>
-
-              <Link href="/interests">
-                <div className="flex-1 px-3 py-4 mx-2 transition duration-150 delay-150 border-t border-gray-200 cursor-pointer hover:border-gray-500 hover:bg-gray-50">
-                  <dt className="font-medium text-gray-900">Interests</dt>
-                  <dd className="mt-2 text-sm text-gray-500">My interests</dd>
-                </div>
-              </Link>
-              <Link href="/chat">
-                <div className="flex-1 px-3 py-4 mx-2 transition duration-150 delay-150 border-t border-gray-200 cursor-pointer hover:border-gray-500 hover:bg-gray-50">
-                <dt className="font-medium text-gray-900">🤖 &nbsp;Chat with me</dt>
-                  <dd className="mt-2 text-sm text-gray-500">Trust me it&lsquo;s me</dd>
-                </div>
-              </Link>
-            </div>
           </div>
         </div>
   )

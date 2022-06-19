@@ -11,15 +11,16 @@ function Layout({children} : LayoutProps) {
       <div className="flex flex-col items-center justify-between max-w-4xl min-h-screen px-4 mx-auto sm:px-6 lg:px-8">
 
       <div className='min-w-full py-24'>
-          <Link href="/xr">
-            <div className="relative w-10 h-10 transition-transform duration-75 ease-in-out delay-75 hover:scale-150">
+            <div className="relative w-10 h-10 transition-transform duration-75 ease-in-out delay-75 cursor-wait hover:grayscale">
             <Image 
               className='animate-spin-slow' 
               src='/portal.png' 
               layout='fill'
               objectFit='contain' 
               alt="portal"
-            /></div></Link>
+            /></div>
+            
+
         {children}
             </div>
         <footer className="flex justify-end w-full pt-3 my-8 border-t-2">
