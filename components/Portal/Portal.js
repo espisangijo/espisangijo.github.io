@@ -5,12 +5,13 @@ AFRAME.registerComponent('portal', {
   schema: {
     title: {type: 'string'},
     url: {type: 'string'},
+    portalPreview: { type: 'string' },
     portalImg: { type: 'string' },
     portalObj: { type: 'string'},
   },
 
     init() {
-      console.log('start')
+      console.log(this.data)
 
       var el = this.el;
       this.parent_position = el.getAttribute('position');
@@ -20,7 +21,7 @@ AFRAME.registerComponent('portal', {
       link.setAttribute('link', 'geometry', {primitive: 'circle', segments: 64, radius: 10, skipCache: true})
       link.setAttribute('color', "#000000")
       link.setAttribute('link', 'backgrounColor', "#000000")
-      link.setAttribute('image', "https://thumbs.dreamstime.com/b/vr-image-futuristic-sci-fi-city-modern-fiction-skyscrapers-buildings-galaxy-discover-spacescape-119014727.jpg")
+      link.setAttribute('image', this.data.portalPreview)
       link.setAttribute('scale', "0.1 0.1 0.001")
       link.setAttribute('visualAspectEnabled', false)
       link.setAttribute('mixin', 'portal')

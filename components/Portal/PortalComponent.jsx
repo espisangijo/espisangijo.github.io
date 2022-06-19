@@ -4,6 +4,7 @@ import { Entity } from 'aframe-react';
 export default function Portal({
     title,
     url,
+    portalPreview,
     portalImg,
     portalObj,
 }) {
@@ -11,7 +12,7 @@ export default function Portal({
 
       <Entity 
         position="5 1.2 5"
-        portal={`title: ${title}; url: ${url}; portalImg: ${portalImg}; portalObj: ${portalObj}`}
+        portal={`title: ${title}; url: ${url}; portalPreview: ${portalPreview}; portalImg: ${portalImg}; portalObj: ${portalObj}`}
         id="portal-component"
       />
 

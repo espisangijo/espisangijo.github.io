@@ -10,18 +10,8 @@ import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-
-        <div className='min-w-full py-24'>
-          <Link href="/xr">
-            <div className="relative w-10 h-10 transition-transform duration-75 ease-in-out delay-75 hover:scale-150">
-            <Image 
-              className='animate-spin-slow' 
-              src='/portal.png' 
-              layout='fill'
-              objectFit='contain' 
-              alt="portal"
-            /></div></Link>
-          <h2 className="mt-8 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">Lorem Ipsum</h2>
+      <div>
+          <h1 className="mt-8 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">Lorem Ipsum</h1>
           <p className="mt-4 text-lg font-light text-gray-500">
             Hi, I am a <i className="p-1 font-mono text-sm text-red-400 bg-gray-100 rounded-md">Software Engineer</i> @ <i className="font-medium text-blue-400">Delight Labs</i>.<br/> 
             Currently working on emerging technologies to build an exciting future.
@@ -70,7 +60,7 @@ const Home: NextPage = () => {
               </Link>
               <Link href="/chat">
                 <div className="flex-1 px-3 py-4 mx-2 transition duration-150 delay-150 border-t border-gray-200 cursor-pointer hover:border-gray-500 hover:bg-gray-50">
-                <dt className="font-medium text-gray-900">Chat with me <FontAwesomeIcon icon={ faRobot} /></dt>
+                <dt className="font-medium text-gray-900">🤖 &nbsp;Chat with me</dt>
                   <dd className="mt-2 text-sm text-gray-500">Trust me it&lsquo;s me</dd>
                 </div>
               </Link>

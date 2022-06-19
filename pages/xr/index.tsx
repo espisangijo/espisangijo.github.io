@@ -6,23 +6,36 @@ import React, { useEffect, useState } from 'react'
 import { Entity, Scene } from 'aframe-react' 
 import Head from 'next/head'
 
-import portalImg from '../../assets/img/portal.png';
-import portalObj from '../../assets/objects/portal.obj'
 import Portal from '../../components/Portal/PortalComponent';
 // import stopSign from '../../assets/objects/StopSign.obj'
 
 function XR() {
     const [appRendered, setAppRendered] = useState(false)
-    
+    const [assets, setAssets] = useState({
+        portalPreview: undefined,
+        portalImg: undefined,
+        portalObj: undefined,
+    })
+    let portalPreview, portalImg, portalObj = null
     useEffect(() => {
         if (typeof window !== "undefined") {
             console.log('window loaded')
-            require('aframe')
-            require('../../components/Portal/Portal')
-            require('../../assets/additive')
-            require('aframe-extras')
-            require('aframe-environment-component')
-            require('aframe-look-at-component')
+            try {
+                require('aframe')
+                require('aframe-extras')
+                require('aframe-environment-component')
+                require('aframe-look-at-component')
+                require('../../assets/additive')
+                require('../../components/Portal/Portal')
+            } catch (error) {
+               console.error(error) 
+            }  
+
+            setAssets({
+                portalPreview: require('../../assets/img/home.png'),
+                portalImg: require('../../assets/img/portal.png'),
+                portalObj: require('../../assets/objects/portal.obj')
+            })
 
             setAppRendered(true)
         }
@@ -31,7 +44,7 @@ function XR() {
     <div style={{ height: '100%', width: '100%' }}>
         <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>XR World</title>
+            <title>The Settlement</title>
         </Head>
         
         {appRendered && (<Scene
@@ -41,10 +54,9 @@ function XR() {
           raycaster="objects:[clickable]"
         >
             <a-assets>
-                <img id="portalImg" src={portalImg}></img>
-                <a-asset-item id="portalObj" src={portalObj}></a-asset-item>
-                {/* <a-asset-item id="emergencyCone" src={emergencyCone}></a-asset-item> */}
-                {/* <a-asset-item id="stopSign" src={stopSign}></a-asset-item> */}
+                <img id="portalPreview" src={assets.portalPreview}></img>
+                <img id="portalImg" src={assets.portalImg}></img>
+                <a-asset-item id="portalObj" src={assets.portalObj}></a-asset-item>
 
                 <a-mixin id="portal"
                     material="backgroundColor: #03c1e2; transparent: true"
@@ -90,6 +102,7 @@ function XR() {
             <Portal
             title="Exit XR"
                 url="/"
+                portalPreview="#portalPreview"
                 portalImg="#portalImg"
                 portalObj="#portalObj" />
         </Scene>)}
