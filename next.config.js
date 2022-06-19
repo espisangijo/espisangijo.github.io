@@ -9,8 +9,8 @@ const nextConfig = {
 
   },
 
-  basePath: "/",
-  assetPrefix: "/",
+  basePath: "",
+  assetPrefix: "",
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.obj/,
