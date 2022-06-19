@@ -8,9 +8,8 @@ const nextConfig = {
     domains: ['www.gravatar.com', 'localhost', 'www.youtube.com', 'img.youtube.com', 'tailwindui.com'],
 
   },
-
-  basePath: "espisangijo.github.io",
-  assetPrefix: "espisangijo.github.io",
+  basePath: "",
+  assetPrefix: "",
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.obj/,
