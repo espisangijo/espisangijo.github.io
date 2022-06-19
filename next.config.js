@@ -6,7 +6,11 @@ const nextConfig = {
     loader: 'akamai',
     path: "",
     domains: ['www.gravatar.com', 'localhost', 'www.youtube.com', 'img.youtube.com', 'tailwindui.com'],
+
   },
+
+  basePath: "/",
+  assetPrefix: "/",
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.obj/,
